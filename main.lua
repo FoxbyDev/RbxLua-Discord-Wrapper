@@ -15,7 +15,7 @@ function handleArguments(functionName, items)
 			end
 		end
 		if badType then
-			error("bad argument #"..index.." to '"..functionName.."' ("..data.allowedTypes[1].." expected, got "..(data.class and getmetatable(data.item)._class or type(data.item))..")", 2)
+			error("bad argument #:"..index.." to '"..functionName.."' ("..data.allowedTypes[1]..", expected, got "..(data.class and getmetatable(data.item)._class or type(data.item))..")", 2)
 			break
 		end
 	end
